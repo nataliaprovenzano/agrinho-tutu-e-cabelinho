@@ -1,0 +1,102 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+section{
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    color: chocolate;
+    margin: 10px 0;
+    padding: 10px 20px;
+}
+
+div{
+    padding: 30px;
+}
+
+@media screen and (min-width: 1024px) {
+ /* estilos para tablet */
+}
+
+@media screen and (min-width: 1728px) {
+
+}
+
+*{
+    margin: 0;
+}
+header{
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    justify-content: space-around;
+    background-color: black;
+    color: aliceblue;
+    position: relative; /*importante para o menu tomar como referência */
+}
+
+ul li{
+    list-style: none;
+}
+
+.texto{
+    color: aliceblue;
+}
+
+a{
+    color: aliceblue;
+    text-decoration: none;
+
+}
+
+.lista{
+    display: none;
+    position: absolute; /* aqui esta definido onde o menu ira aparecer */
+    top: 100%;
+    background-color: blueviolet;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/*fazendo o menu aparecer quando clicado */
+.caixa:checked ~ .lista{
+    display: block;
+}
+
+/* desaparecendo a caixa de seleção */
+#menu{
+    display: none;
+}
+
+.lista-item{
+    padding: 12px 0;
+}
+
+/*responsividade - ideia */
+
+@media screen and (min-width: 1024px) {
+    .lista{
+        right: 8%;
+        width: 14%;
+        padding: 20px;
+        text-align: start;
+    }
+    .lista-item:hover{
+        background-color: brown;
+    }
+}
+.imagem{
+    width: 50%;
+}
