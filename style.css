@@ -51,11 +51,12 @@ ul li{
 }
 
 .texto{
-    color: aliceblue;
+    color: rgb(160
+, 38, 150);
 }
 
 a{
-    color: aliceblue;
+    color: rgb(160, 38, 150);
     text-decoration: none;
 
 }
