@@ -65,7 +65,7 @@ a{
     display: none;
     position: absolute; /* aqui esta definido onde o menu ira aparecer */
     top: 100%;
-    background-color: blueviolet;
+    background-color: rgb(192, 156, 226);
     width: 100%;
     padding: 20px 0;
     text-align: center;
@@ -95,7 +95,7 @@ a{
         text-align: start;
     }
     .lista-item:hover{
-        background-color: brown;
+        background-color: rgb(233, 224, 235);
     }
 }
 .imagem{
