@@ -42,7 +42,7 @@ header{
     padding: 12px;
     justify-content: space-around;
     background-color: rgb(177, 121, 214);
-    color: aliceblue;
+    color: rgb(160, 38, 150);
     position: relative; /*importante para o menu tomar como referência */
 }
 
