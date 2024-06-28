@@ -1,44 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-br"> 
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css"
-</head> 
-
+    <title>Site Profissional</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="scripts.js"></script>
+</head>
 <body>
     <header>
-        <h1> Agrinho </h1>
-<A href="#"> sobre nós</A>
-<a href="#"> Saiba mais</a>
+        <nav>
+            <div class="logo">Minha Empresa</div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
     </header>
 
-    <section>
-        <img class="imagem" src="espantalho.jpg" alt="descrição">
-        <div>
-            <h2>sistema espantalho</h2>
-            <p>O futuro inovador da pecuária está aqui</p>
+    <section id="home">
+        <div class="home-content">
+            <div class="text-content">
+                <h1>Bem-vindo ao Nosso Site</h1>
+                <p>Oferecemos os melhores serviços para o seu negócio.</p>
+                <a href="#services" class="btn">Nossos Serviços</a>
+            </div>
+            <div class="image-content">
+                <img src="download (1).jpeg" alt="Imagem de destaque 1">
+                <img src="download (1).jpeg" alt="Imagem de destaque 2">
+            </div>
         </div>
     </section>
 
-</body>
+    <section id="about">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma empresa dedicada a fornecer soluções de alta qualidade para nossos clientes.</p>
 
-<header>
-    <h1></h1>
-    <input type="checkbox" id="menu" class="caixa">
-    <label for="menu">
-        <h3 class="texto">MENU</h3>
-        <!-- Aqui pode vir o que quiser, como imagem.-->
-    </label>
-    <ul class="lista">
-        <li class="lista-item"> <a href=#> Apoie-nos </a> </li>
-        <li class="lista-item"> <a href=#> Projeto </a> </li>
-        <li class="lista-item"> <a href=#> Objetivos </a> </li>
-        <li class="lista-item"> <a href=#> Colaboradores</a> </li>
-        <li class="lista-item"> <a href="nova-pagina.html"> Item 5 - nova pagina</a> </a> </li>
-    </ul>
-    <!-- subistituir 0 # pelo link -->
-     <!-- se for outra pagina criar um novo html-->
-</header>
+    <section id="services">
+        <h2>Serviços</h2>
+        <div class="services-grid">
+            <div class="service">
+                <i class="fas fa-chart-line"></i>
+                <h3>Consultoria</h3>
+                <p>Oferecemos consultoria especializada para o seu negócio.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-code"></i>
+                <h3>Desenvolvimento</h3>
+                <p>Desenvolvemos soluções personalizadas para atender às suas necessidades.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-life-ring"></i>
+                <h3>Suporte</h3>
+                <p>Fornecemos suporte contínuo para garantir o sucesso do seu negócio.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <form action="#" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Minha Empresa. Todos os direitos reservados.</p>
+    </footer>
+</body>
 </html>
+

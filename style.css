@@ -1,103 +1,274 @@
-*{
-
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header{
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-section{
-    display: flex;
-    align-items: center;
-    background-color: rgb(247, 220, 241);
-    color: rgb(210, 30, 141);
-    margin: 10px 0;
-    padding: 10px 20px;
-}
-
-div{
-    padding: 30px;
-}
-
-@media screen and (min-width: 1024px) {
- /* estilos para tablet */
-}
-
-@media screen and (min-width: 1728px) {
-
-}
-
-*{
-    margin: 0;
-}
-header{
-    display: flex;
-    align-items: center;
-    padding: 12px;
-    justify-content: space-around;
-    background-color: rgb(177, 121, 214);
-    color: rgb(160, 38, 150);
-    position: relative; /*importante para o menu tomar como referência */
-}
-
-ul li{
-    list-style: none;
-}
-
-.texto{
-    color: rgb(160
-, 38, 150);
-}
-
-a{
-    color: rgb(160, 38, 150);
-    text-decoration: none;
-
-}
-
-.lista{
-    display: none;
-    position: absolute; /* aqui esta definido onde o menu ira aparecer */
-    top: 100%;
-    background-color: rgb(192, 156, 226);
-    width: 100%;
-    padding: 20px 0;
+header {
+    background: #4CAF50;
+    color: #fff;
+    padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-/*fazendo o menu aparecer quando clicado */
-.caixa:checked ~ .lista{
-    display: block;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-/* desaparecendo a caixa de seleção */
-#menu{
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    transition: transform 0.5s ease-in;
+}
+
+nav ul.nav-active {
+    transform: translateX(0);
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFEB3B;
+}
+
+.burger {
     display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 21px;
 }
 
-.lista-item{
-    padding: 12px 0;
+.burger div {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: all 0.3s ease;
 }
 
-/*responsividade - ideia */
+.burger.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
 
-@media screen and (min-width: 1024px) {
-    .lista{
-        right: 8%;
-        width: 14%;
-        padding: 20px;
-        text-align: start;
+.burger.toggle .line2 {
+    opacity: 0;
+}
+
+.burger.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+section {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 5rem auto 2rem;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #4CAF50;
+}
+
+#home {
+    text-align: center;
+    background-color: #e0f7fa;
+    color: #333;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.home-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text-content {
+    flex: 1;
+    min-width: 300px;
+    margin: 1rem;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.text-content p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.image-content {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-content img {
+    width: 45%;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-content img:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    display: inline-block;
+    background: #FF5722;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #E64A19;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.service {
+    background: #f9f9f9;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+.service i {
+    font-size: 3rem;
+    color: #FF5722;
+    margin-bottom: 1rem;
+}
+
+.service h3 {
+    font-size: 1.8rem;
+    color: #FF5722;
+    margin-bottom: 0.5rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #FF5722;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #E64A19;
+}
+
+footer {
+    background: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
     }
-    .lista-item:hover{
-        background-color: rgb(233, 224, 235);
+
+    nav ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        height: 100vh;
+        background: #4CAF50;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
     }
-}
-.imagem{
-    width: 50%;
+
+    nav ul.nav-active {
+        transform: translateX(0);
+    }
+
+    nav ul li {
+        margin: 1.5rem 0;
+    }
+
+    .home-content {
+        flex-direction: column;
+    }
+
+    .image-content img {
+        width: 80%;
+        margin: 0.5rem 0;
+    }
 }
