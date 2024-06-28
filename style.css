@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background: #4CAF50;
+    background: #2f74a1;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
@@ -61,7 +61,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #FFEB3B;
+    color: hsl(0, 0%, 0%);
 }
 
 .burger {
